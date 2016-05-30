@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "EditBookViewController.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *bookTitleLabel;
@@ -20,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Book title is %@", _book.title);
     [self setLabels];
     // Do any additional setup after loading the view.
 }
@@ -36,14 +36,25 @@
     _checkedInLabel.text = _book.inLibrary;
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+    if ([segue.identifier isEqualToString:@"unwindToDetailViewSegue"]) {
+        EditBookViewController *editBookVC = (EditBookViewController *)segue.sourceViewController;
+        _book.title = editBookVC.bookToEdit.title;
+        _book.author = editBookVC.bookToEdit.author;
+        _book.numberOfPages = editBookVC.bookToEdit.numberOfPages;
+        [self setLabels];
+    }
 }
-*/
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"editBookSegue"]) {
+        EditBookViewController *vc = [segue destinationViewController];
+        vc.bookToEdit = _book;
+    }
+}
+
 
 @end

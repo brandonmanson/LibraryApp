@@ -102,7 +102,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="okZ-CJ-ww2"/>
+                    <navigationItem key="navigationItem" id="okZ-CJ-ww2">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="pzf-pR-TIp">
+                            <connections>
+                                <segue destination="LLI-1c-N5a" kind="push" identifier="editBookSegue" id="ApF-7k-ZE0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="authorLabel" destination="JXS-1Y-f11" id="fAM-Rl-nou"/>
                         <outlet property="bookTitleLabel" destination="GDC-TB-I9j" id="lJ1-hU-yle"/>
@@ -113,6 +119,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1156" y="-314"/>
+        </scene>
+        <!--Edit Book View Controller-->
+        <scene sceneID="YnI-Mc-wrV">
+            <objects>
+                <viewController id="LLI-1c-N5a" customClass="EditBookViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xlB-5N-jtS"/>
+                        <viewControllerLayoutGuide type="bottom" id="XSH-Lh-m2b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X7b-M9-hB7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpY-bm-Lbk">
+                                <rect key="frame" x="150" y="111" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9e-iu-eqd">
+                                <rect key="frame" x="150" y="175" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="obC-Rf-tAv">
+                                <rect key="frame" x="150" y="243" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bh-74-FPT">
+                                <rect key="frame" x="20" y="115" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-RS-dPE">
+                                <rect key="frame" x="20" y="179" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaH-Wg-mNx">
+                                <rect key="frame" x="20" y="247" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBq-OD-GMj">
+                                <rect key="frame" x="137" y="344" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveUpdatedBookAction:" destination="LLI-1c-N5a" eventType="touchUpInside" id="yj1-jA-dPj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dvq-GK-t4p"/>
+                    <connections>
+                        <outlet property="bookAuthorTextField" destination="S9e-iu-eqd" id="hZY-d9-wVh"/>
+                        <outlet property="bookTitleTextField" destination="rpY-bm-Lbk" id="0Hf-ZJ-l4N"/>
+                        <outlet property="numberOfPagesTextField" destination="obC-Rf-tAv" id="CyW-Cb-owN"/>
+                        <segue destination="PrX-kB-kGM" kind="unwind" identifier="unwindToDetailViewSegue" unwindAction="prepareForUnwind:" id="TRR-EL-Y6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ww7-q6-6x5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PrX-kB-kGM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="-314"/>
         </scene>
     </scenes>
 </document>

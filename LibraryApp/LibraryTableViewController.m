@@ -18,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createLibrary];
+    if (_library == nil) {
+        [self createLibrary];
+    }
     NSLog(@"Number of books in library: %lu", ([_library.books count]));
     
     // Uncomment the following line to preserve selection between presentations.

@@ -17,6 +17,7 @@
 		43E705FC1CF78EA8003E4756 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E705FB1CF78EA8003E4756 /* Book.m */; };
 		94EDAACF1CF8792900475552 /* LibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EDAACE1CF8792900475552 /* LibraryTableViewController.m */; };
 		94EDAAD21CFB3A3900475552 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EDAAD11CFB3A3900475552 /* DetailViewController.m */; };
+		94EDAAD51CFB4E3000475552 /* EditBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EDAAD41CFB4E3000475552 /* EditBookViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		94EDAACE1CF8792900475552 /* LibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryTableViewController.m; sourceTree = "<group>"; };
 		94EDAAD01CFB3A3900475552 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		94EDAAD11CFB3A3900475552 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		94EDAAD31CFB4E3000475552 /* EditBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditBookViewController.h; sourceTree = "<group>"; };
+		94EDAAD41CFB4E3000475552 /* EditBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditBookViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				43E705FA1CF78EA8003E4756 /* Book.h */,
 				43E705FB1CF78EA8003E4756 /* Book.m */,
 				43E705E91CF78CAF003E4756 /* Main.storyboard */,
+				94EDAAD31CFB4E3000475552 /* EditBookViewController.h */,
+				94EDAAD41CFB4E3000475552 /* EditBookViewController.m */,
 				94EDAACD1CF8792900475552 /* LibraryTableViewController.h */,
 				94EDAACE1CF8792900475552 /* LibraryTableViewController.m */,
 				94EDAAD01CFB3A3900475552 /* DetailViewController.h */,
@@ -172,6 +177,7 @@
 				43E705FC1CF78EA8003E4756 /* Book.m in Sources */,
 				43E705E81CF78CAF003E4756 /* ViewController.m in Sources */,
 				43E705F91CF78E9F003E4756 /* Library.m in Sources */,
+				94EDAAD51CFB4E3000475552 /* EditBookViewController.m in Sources */,
 				94EDAACF1CF8792900475552 /* LibraryTableViewController.m in Sources */,
 				43E705E51CF78CAF003E4756 /* AppDelegate.m in Sources */,
 				43E705E21CF78CAF003E4756 /* main.m in Sources */,
